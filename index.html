@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title>Explorers of the North Sea Automa</title>
+
+<!--        <link rel="stylesheet" href="https://raw.githubusercontent.com/philrange/automas/master/automas.css" type="text/css">-->
+        <link rel="stylesheet" href="https://philrange.github.io/automas/automas.css" type="text/css">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        
+        <script src="https://philrange.github.io/automas/cards.js"></script>
+        <script src="main.js"></script>
+
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    </head>
+
+    <body onLoad="loadCards()">
+
+        <div class="background-container">
+            <div class="top-background"></div>
+        </div>
+
+        <header>
+            <span class="menu-logo" onclick="restart()">Explorers Automa</span> 
+            <span class="menu-divider"></span>  
+
+            <span class="menu-item initially-hidden" id="number-of-cards-menu-item">
+                Automa turn: <span class="badge badge-light" id="number-of-cards"></span>
+            </span>
+
+            <span class="menu-item initially-hidden" id="restart-menu-item">
+                <button type="button" class="btn btn-warning btn-sm" onClick="restart()">
+                    <span class="fas fa-sync-alt"></span>
+                    <span class="d-none d-md-inline">New Game</span>
+                </button>
+            </span>
+
+        </header>
+
+
+
+    <!-- main page -->
+    <div class="container">
+
+        <div id='intro'>
+            A helper app for the automa for Explorers of the North Sea created by dukefanblue2005 on bgg (<a href="https://boardgamegeek.com/filepage/203170/solo-automa-explorers-north-sea">https://boardgamegeek.com/filepage/203170/solo-automa-explorers-north-sea</a>)
+        <div class="draw-button"><button type="button" class="btn btn-primary" onclick="start()">Start game</button></div>
+        </div>
+            
+
+        <div id='current-card-container' class="container-fluid initially-hidden">
+                <img id="current-card" src="images/back.jpg" alt="back of card"/>
+            <div class="draw-button" id="draw-button-container"><button type="button" class="btn btn-primary" onclick="drawCard()">Draw a card</button></div>
+            <div id="game-end" class="initially-hidden draw-button">End of Game</div>
+        </div>
+
+
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        
+
+    </body>
+</html>
